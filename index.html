@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chen,Shi 陳熹</title>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="head">
+        <div class="title">Chen,Shi</div>
+        <div class="subtitle">Front-End Engineer</div>
+
+        <div class="config">
+          <div class="language">
+            <img
+              id="lanImg"
+              src="/images/united-states.png"
+              onclick="handleLanguage()"
+              alt=""
+            />
+          </div>
+          <div class="mode"></div>
+        </div>
+      </div>
+      <div class="links">
+        <img class="linkImg" src="/images/gmail.png" alt="" />
+        <div class="linkcontent">dolfia1019@gmail.com</div>
+        <img class="linkImg" src="/images/github.png" />
+        <div class="linkcontent">
+          <a href="https://github.com/MaoMaoYu76" target="_blank"
+            >github.com/MaoMaoYu76</a
+          >
+        </div>
+      </div>
+      <div class="lights">
+        <div class="light" id="comfort-zone">
+          Stepping out of my comfort zone: I gave up all of my ten years of
+          experience in the supplementary education industry and related
+          qualifications.
+        </div>
+        <div class="light" id="recognition">
+          Employment recognition: Outstanding Newcomer Award, Outstanding
+          Employee Award.
+        </div>
+        <div class="light" id="learning">
+          Proactive learning during employment: Obtained relevant qualifications
+          and skills through continuous studies and training during the period
+          of employment.
+        </div>
+      </div>
+      <div class="content">
+        <div class="skills">
+          <div class="heading">SKILLS</div>
+          <div class="subheading">Front-end</div>
+          <div class="skill">HTML/CSS</div>
+          <div class="skill">RWD</div>
+          <div class="skill">JavaScript ES6</div>
+          <div class="skill">AJAX</div>
+          <div class="skill">React</div>
+          <div class="skill">React</div>
+          <div class="skill">Laravel</div>
+          <div class="skill">Boostrap</div>
+          <div class="subheading">Back-end</div>
+          <div class="skill">Python/Python Flask</div>
+          <div class="skill">MySQL</div>
+          <div class="skill">AWS EC2</div>
+          <div class="skill">PHP</div>
+          <div class="subheading">Development Tools</div>
+          <div class="skill">Git/GitHub</div>
+          <div class="skill">npm</div>
+          <div class="skill">Visual Studio Code</div>
+          <div class="skill">Webpack</div>
+          <div class="subheading">Firebase</div>
+          <div class="skill">Authantication</div>
+          <div class="skill">Storage</div>
+          <div class="skill">FireStore</div>
+        </div>
+        <div class="project">
+          <div class="heading">PROJECT</div>
+          <div class="subheading">Designer, Online image editing tool</div>
+          <div class="light">
+            Using Firebase Hosting, SPA is implemented through React Router,
+            useContext is used to manage login status.
+          </div>
+          <div class="light">
+            Implementing functionalities such as rotation, dragging, and
+            resizing without relying on any external libraries.
+          </div>
+          <div class="light">
+            Copy and paste the image, while simultaneously uploading the file to
+            the member's image gallery.
+          </div>
+          <div class="light">
+            Implement project storage and loading in conjunction with Firestore.
+          </div>
+          <div class="links">
+            <img class="linkImg" src="/images/link.png" />
+            <div class="linkcontent">
+              <a href="https://react-project-26a32.web.app/" target="_blank"
+                >react-project-26a32.web.app
+              </a>
+            </div>
+            <img class="linkImg" src="/images/github.png" />
+            <div class="linkcontent">
+              <a href="https://github.com/MaoMaoYu76" target="_blank"
+                >github.com/MaoMaoYu76/MyProject</a
+              >
+            </div>
+          </div>
+          <div class="subheading">
+            Taipei Day trip, Attraction guide reservation
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let language = "us";
+    const titleDiv = document.querySelector(".title");
+    const subtitleDiv = document.querySelector(".subtitle");
+    const handleLanguage = () => {
+      const lanImg = document.getElementById("lanImg");
+      const comfortZoneDiv = document.getElementById("comfort-zone");
+      const recognitionDiv = document.getElementById("recognition");
+      const learningDiv = document.getElementById("learning");
+      if (language === "us") {
+        lanImg.src = "/images/taiwan.png";
+        language = "tw";
+        titleDiv.textContent = "陳熹";
+        subtitleDiv.textContent = "前端工程師";
+        comfortZoneDiv.textContent =
+          "跳脫舒適圈：長達十年的補教服務經驗與相關證照──我通通都不要了。";
+        recognitionDiv.textContent = "受雇服務肯定：優秀新人獎、優秀員工獎。";
+        learningDiv.textContent =
+          "在職主動學習：從業期間陸續修業取得相關證照與技能。";
+      } else {
+        lanImg.src = "/images/united-states.png";
+        language = "us";
+        titleDiv.textContent = "Chen,Shi";
+        subtitleDiv.textContent = "Front-End Engineer";
+        comfortZoneDiv.textContent =
+          "Stepping out of my comfort zone: I gave up all of my ten years of experience in the supplementary education industry and related qualifications.";
+        recognitionDiv.textContent =
+          "Employment recognition: Outstanding Newcomer Award, Outstanding Employee Award.";
+        learningDiv.textContent =
+          "Proactive learning during employment: Obtained relevant qualifications and skills through continuous studies and training during the period of employment.";
+      }
+    };
+  </script>
+</html>
