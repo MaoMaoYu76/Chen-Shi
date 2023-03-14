@@ -51,6 +51,7 @@
       }
 
       #lanImg {
+        cursor: pointer;
       }
 
       .links {
@@ -74,7 +75,7 @@
       }
 
       .skills {
-        width: 30%;
+        width: 25%;
       }
 
       .heading {
@@ -124,20 +125,20 @@
         </div>
       </div>
       <div class="lights">
-        <div class="light" id="comfort-zone">
+        <li class="light" id="comfort-zone">
           Stepping out of my comfort zone: I gave up all of my ten years of
           experience in the supplementary education industry and related
           qualifications.
-        </div>
-        <div class="light" id="recognition">
+        </li>
+        <li class="light" id="recognition">
           Employment recognition: Outstanding Newcomer Award, Outstanding
           Employee Award.
-        </div>
-        <div class="light" id="learning">
+        </li>
+        <li class="light" id="learning">
           Proactive learning during employment: Obtained relevant qualifications
           and skills through continuous studies and training during the period
           of employment.
-        </div>
+        </li>
       </div>
       <div class="content">
         <div class="skills">
@@ -168,22 +169,24 @@
         </div>
         <div class="project">
           <div class="heading">PROJECT</div>
-          <div class="subheading">Designer, Online image editing tool</div>
-          <div class="light">
+          <div class="subheading" id="designer">
+            Designer, Online image editing tool
+          </div>
+          <li class="light" id="hosting">
             Using Firebase Hosting, SPA is implemented through React Router,
             useContext is used to manage login status.
-          </div>
-          <div class="light">
+          </li>
+          <li class="light" id="homemade">
             Implementing functionalities such as rotation, dragging, and
             resizing without relying on any external libraries.
-          </div>
-          <div class="light">
+          </li>
+          <li class="light" id="paste">
             Copy and paste the image, while simultaneously uploading the file to
             the member's image gallery.
-          </div>
-          <div class="light">
+          </li>
+          <li class="light" id="save">
             Implement project storage and loading in conjunction with Firestore.
-          </div>
+          </li>
           <div class="links">
             <img class="linkImg" src="./images/link.png" />
             <div class="linkcontent">
@@ -214,6 +217,11 @@
       const comfortZoneDiv = document.getElementById("comfort-zone");
       const recognitionDiv = document.getElementById("recognition");
       const learningDiv = document.getElementById("learning");
+      const designerDiv = document.getElementById("designer");
+      const hostingDiv = document.getElementById("hosting");
+      const homemadeDiv = document.getElementById("homemade");
+      const pasteDiv = document.getElementById("paste");
+      const saveDiv = document.getElementById("save");
       if (language === "us") {
         lanImg.src = "./images/taiwan.png";
         language = "tw";
@@ -224,6 +232,12 @@
         recognitionDiv.textContent = "受雇服務肯定：優秀新人獎、優秀員工獎。";
         learningDiv.textContent =
           "在職主動學習：從業期間陸續修業取得相關證照與技能。";
+        designerDiv.textContent = "Designer：線上海報、賀卡編輯";
+        hostingDiv.textContent =
+          "使用Firebase Hosting透過React Router去實現SPA，同時使用React Context管理登入狀態。";
+        homemadeDiv.textContent = "不依賴套件實現旋轉、拖曳、改變大小等功能。";
+        pasteDiv.textContent = "複製黏貼圖像，同時將檔案上傳至會員的圖像庫。";
+        saveDiv.textContent = "配合firestore實現專案儲存與讀取。";
       } else {
         lanImg.src = "./images/united-states.png";
         language = "us";
@@ -235,6 +249,15 @@
           "Employment recognition: Outstanding Newcomer Award, Outstanding Employee Award.";
         learningDiv.textContent =
           "Proactive learning during employment: Obtained relevant qualifications and skills through continuous studies and training during the period of employment.";
+        designerDiv.textContent = "Designer, Online image editing tool";
+        hostingDiv.textContent =
+          "Using Firebase Hosting, SPA is implemented through React Router, useContext is used to manage login status.";
+        homemadeDiv.textContent =
+          "Implementing functionalities such as rotation, dragging, and resizing without relying on any external libraries.";
+        pasteDiv.textContent =
+          "Copy and paste the image, while simultaneously uploading the file to the member's image gallery.";
+        saveDiv.textContent =
+          "Implement project storage and loading in conjunction with Firestore.";
       }
     };
   </script>
