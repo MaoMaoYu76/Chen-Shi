@@ -65,6 +65,7 @@
         display: flex;
         align-items: center;
         margin: 20px 0;
+        flex-wrap: wrap;
       }
 
       .linkImg {
@@ -73,16 +74,18 @@
 
       .linkcontent {
         margin-right: 15px;
+        display: flex;
+        align-items: center;
       }
 
       .content {
         display: flex;
-        /* flex-wrap: wrap;
-  align-content: center; */
+        width: 100%;
+        align-content: center;
       }
 
       .skills {
-        width: 25%;
+        margin-right: 20px;
       }
 
       .heading {
@@ -98,8 +101,25 @@
       }
 
       .propject {
-        margin: 0 20px;
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .date {
+        display: flex;
+        justify-content: space-between;
+      }
+      @media (max-width: 767px) {
+        .content {
+          flex-wrap: wrap;
+        }
+        .main {
+          width: 100%;
+        }
+        .subtitle {
+          margin: 0 15px;
+        }
       }
     </style>
   </head>
@@ -123,10 +143,12 @@
         </div>
       </div>
       <div class="links">
-        <img class="linkImg" src="./images/gmail.png" alt="" />
-        <div class="linkcontent">dolfia1019@gmail.com</div>
-        <img class="linkImg" src="./images/github.png" />
         <div class="linkcontent">
+          <img class="linkImg" src="./images/gmail.png" alt="" />
+          dolfia1019@gmail.com
+        </div>
+        <div class="linkcontent">
+          <img class="linkImg" src="./images/github.png" />
           <a href="https://github.com/MaoMaoYu76" target="_blank"
             >github.com/MaoMaoYu76</a
           >
@@ -161,7 +183,7 @@
           <div class="skill">Laravel</div>
           <div class="skill">Boostrap</div>
           <div class="subheading">Back-end</div>
-          <div class="skill">Python/Python Flask</div>
+          <div class="skill">Python Flask</div>
           <div class="skill">MySQL</div>
           <div class="skill">AWS EC2</div>
           <div class="skill">PHP</div>
@@ -196,21 +218,91 @@
             Implement project storage and loading in conjunction with Firestore.
           </li>
           <div class="links">
-            <img class="linkImg" src="./images/link.png" />
             <div class="linkcontent">
+              <img class="linkImg" src="./images/link.png" />
               <a href="https://react-project-26a32.web.app/" target="_blank"
                 >react-project-26a32.web.app
               </a>
             </div>
-            <img class="linkImg" src="./images/github.png" />
             <div class="linkcontent">
-              <a href="https://github.com/MaoMaoYu76" target="_blank"
+              <img class="linkImg" src="./images/github.png" />
+              <a href="https://github.com/MaoMaoYu76/MyProject" target="_blank"
                 >github.com/MaoMaoYu76/MyProject</a
               >
             </div>
           </div>
-          <div class="subheading">
-            Taipei Day trip, Attraction guide reservation
+          <div class="subheading" id="TDT">
+            Taipei Day Trip, Attraction guide reservation
+          </div>
+          <li class="light" id="JavaScript">
+            Implement scrolling, carousel, login pop-up window, and avatar
+            preview features using pure JavaScript.
+          </li>
+          <li class="light" id="back-end">
+            The development involves using the Flask framework with Python,
+            creating RESTful APIs to interact with a MySQL database, and using
+            AJAX to make asynchronous requests to the server to fetch data.
+          </li>
+          <li class="light" id="tapPay">
+            Integrating TapPay SDK allows users to make payments easily without
+            leaving the web page.
+          </li>
+          <li class="light" id="deploy">
+            Deploying the project to AWS EC2 cloud server.
+          </li>
+          <div class="links">
+            <div class="linkcontent">
+              <img class="linkImg" src="./images/link.png" />
+              <a href="http://35.76.65.117:3000/" target="_blank"
+                >35.76.65.117:3000
+              </a>
+            </div>
+            <div class="linkcontent">
+              <img class="linkImg" src="./images/github.png" />
+              <a
+                href="https://github.com/MaoMaoYu76/taipei-day-trip"
+                target="_blank"
+                >github.com/MaoMaoYu76/taipei-day-trip</a
+              >
+            </div>
+          </div>
+          <div class="heading">EXPERIENCES</div>
+          <div class="date">
+            <div class="subheading">WeHelp Bootcamp</div>
+            <div class="subheading">Sept 2022 - Mar 2023</div>
+          </div>
+          <li class="light" id="weekly">
+            Completed weekly project tasks continuously for six months without
+            interruption.
+          </li>
+          <li class="light" id="trip">
+            With a brief guidance, completed the Taipei day trip project
+            independently within seven weeks.
+          </li>
+          <li class="light" id="coopration">
+            Collaborative experience of using GitHub for a one-week project of
+            weather API integration.
+          </li>
+          <li class="light" id="react">
+            Completed the Designer project independently within eight weeks on
+            the first-time use of React framework.
+          </li>
+          <div class="date">
+            <div class="subheading" id="cram">Cram school Teacher</div>
+            <div class="subheading">Oct 2012 - Feb 2022</div>
+          </div>
+
+          <li class="light" id="work">
+            As a cram school teacher , having worked in Taipei for nearly a
+            decade, my salary level has reached the top 12% among peers in the
+            same profession.
+          </li>
+          <div class="heading">EDUCATION</div>
+          <div class="date">
+            <div class="subheading" id="edu">
+              National Chi Nan University, Chinese Language and Literature
+            </div>
+            <div class="subheading">Sept 2008 - Jun 2012</div>
           </div>
         </div>
       </div>
@@ -230,6 +322,18 @@
       const homemadeDiv = document.getElementById("homemade");
       const pasteDiv = document.getElementById("paste");
       const saveDiv = document.getElementById("save");
+      const JavaScriptDiv = document.getElementById("JavaScript");
+      const backendDiv = document.getElementById("back-end");
+      const tapPayDiv = document.getElementById("tapPay");
+      const TDTDiv = document.getElementById("TDT");
+      const deployDiv = document.getElementById("deploy");
+      const workDiv = document.getElementById("work");
+      const cramDiv = document.getElementById("cram");
+      const weeklyDiv = document.getElementById("weekly");
+      const tripDiv = document.getElementById("trip");
+      const cooprationDiv = document.getElementById("coopration");
+      const reactDiv = document.getElementById("react");
+      const eduDiv = document.getElementById("edu");
       if (language === "us") {
         lanImg.src = "./images/taiwan.png";
         language = "tw";
@@ -242,10 +346,26 @@
           "在職主動學習：從業期間陸續修業取得相關證照與技能。";
         designerDiv.textContent = "Designer：線上海報、賀卡編輯";
         hostingDiv.textContent =
-          "使用Firebase Hosting透過React Router去實現SPA，同時使用React Context管理登入狀態。";
+          "使用Firebase Hosting透過React Router去實現SPA，同時使用React useContext管理登入狀態。";
         homemadeDiv.textContent = "不依賴套件實現旋轉、拖曳、改變大小等功能。";
         pasteDiv.textContent = "複製黏貼圖像，同時將檔案上傳至會員的圖像庫。";
-        saveDiv.textContent = "配合firestore實現專案儲存與讀取。";
+        saveDiv.textContent = "配合Firestore實現專案儲存與讀取。";
+        JavaScriptDiv.textContent =
+          "使用純javascript實現捲動、輪播、登入窗以及頭貼預覽。";
+        backendDiv.textContent =
+          "以Python Flask作為後端框架，搭配MySQL開發RESTful APIs並應用AJAX技術抓取。";
+        tapPayDiv.textContent = "引入TapPay SDK不必離開網頁即可輕鬆支付。";
+        TDTDiv.textContent = "台北一日遊：景點導覽預定網";
+        deployDiv.textContent = "使用AWS EC2部屬專案。";
+        workDiv.textContent =
+          "做為補教老師在台北地區從業近十年，薪資水準達到同職位者中的前12%。";
+        cramDiv.textContent = "安親補教老師";
+        weeklyDiv.textContent = "連續半年不間斷地每週完成發派的專案任務。";
+        tripDiv.textContent = "在簡單的指引下，七週內完成台北一日遊專案。";
+        cooprationDiv.textContent =
+          "使用GitHub以團隊形式完成為期一週的天氣API串接。";
+        reactDiv.textContent = "獨自在八週內，初次以React完成Designer專案。";
+        eduDiv.textContent = "國立暨南國際大學──中國語文學系";
       } else {
         lanImg.src = "./images/united-states.png";
         language = "us";
@@ -266,6 +386,28 @@
           "Copy and paste the image, while simultaneously uploading the file to the member's image gallery.";
         saveDiv.textContent =
           "Implement project storage and loading in conjunction with Firestore.";
+        JavaScriptDiv.textContent =
+          "Implement scrolling, carousel, login window, and avatar preview features using pure JavaScript.";
+        backendDiv.textContent =
+          "The development involves using the Flask framework with Python, creating RESTful APIs to interact with a MySQL database, and using AJAX to make asynchronous requests to the server to fetch data.";
+        tapPayDiv.textContent =
+          "Integrating TapPay SDK allows users to make payments easily without leaving the web page.";
+        TDTDiv.textContent = "Taipei Day Trip, Attraction guide reservation";
+        deployDiv.textContent =
+          "Deploying the project to AWS EC2 cloud server.";
+        workDiv.textContent =
+          "As a cram school teacher , having worked in Taipei for nearly a decade, my salary level has reached the top 12% among peers in the same profession.";
+        cramDiv.textContent = "Cram school Teacher";
+        weeklyDiv.textContent =
+          "Completed weekly project tasks continuously for six months without interruption.";
+        cooprationDiv.textContent =
+          "Collaborative experience of using GitHub for a one-week project of weather API integration.";
+        reactDiv.textContent =
+          "Completed the Designer project independently within eight weeks on the first-time use of React framework.";
+        eduDiv.textContent =
+          "National Chi Nan University, Chinese Language and Literature";
+        tripDiv.textContent =
+          "With a brief guidance, completed the Taipei day trip project independently within seven weeks.";
       }
     };
   </script>
