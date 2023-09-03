@@ -61,11 +61,16 @@
         margin-left: 10px;
       }
 
+      .detail {
+        padding-left: 50px;
+      }
+
       .links {
         display: flex;
         align-items: center;
         margin: 20px 0;
         flex-wrap: wrap;
+        padding-left: 25px;
       }
 
       .linkImg {
@@ -111,6 +116,11 @@
         justify-content: space-between;
       }
       @media (max-width: 767px) {
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 50px;
+        }
         .content {
           flex-wrap: wrap;
         }
@@ -173,50 +183,44 @@
       <div class="content">
         <div class="skills">
           <div class="heading">SKILLS</div>
-          <div class="subheading">Front-end</div>
-          <div class="skill">HTML/CSS</div>
-          <div class="skill">RWD</div>
-          <div class="skill">JavaScript ES6</div>
-          <div class="skill">AJAX</div>
-          <div class="skill">React</div>
-          <div class="skill">React</div>
-          <div class="skill">Laravel</div>
-          <div class="skill">Boostrap</div>
-          <div class="subheading">Back-end</div>
-          <div class="skill">Python Flask</div>
-          <div class="skill">MySQL</div>
-          <div class="skill">AWS EC2</div>
-          <div class="skill">PHP</div>
-          <div class="subheading">Development Tools</div>
-          <div class="skill">Git/GitHub</div>
-          <div class="skill">npm</div>
-          <div class="skill">Visual Studio Code</div>
-          <div class="skill">Webpack</div>
-          <div class="subheading">Firebase</div>
-          <div class="skill">Authantication</div>
-          <div class="skill">Storage</div>
-          <div class="skill">FireStore</div>
+          <div class="grid-container">
+            <div class="grid">
+              <div class="subheading">Front-end</div>
+              <div class="skill">HTML/CSS</div>
+              <div class="skill">RWD</div>
+              <div class="skill">JavaScript ES6</div>
+              <div class="skill">AJAX</div>
+              <div class="skill">React</div>
+              <div class="skill">Laravel</div>
+              <div class="skill">Boostrap</div>
+            </div>
+            <div class="grid">
+              <div class="subheading">Back-end</div>
+              <div class="skill">Python Flask</div>
+              <div class="skill">MySQL</div>
+              <div class="skill">AWS EC2</div>
+              <div class="skill">PHP</div>
+            </div>
+            <div class="grid">
+              <div class="subheading">Development Tools</div>
+              <div class="skill">Git/GitHub</div>
+              <div class="skill">npm</div>
+              <div class="skill">Visual Studio Code</div>
+              <div class="skill">Webpack</div>
+            </div>
+            <div class="grid">
+              <div class="subheading">Firebase</div>
+              <div class="skill">Authantication</div>
+              <div class="skill">Storage</div>
+              <div class="skill">FireStore</div>
+            </div>
+          </div>
         </div>
         <div class="project">
           <div class="heading">PROJECT</div>
           <div class="subheading" id="designer">
             Designer, Online image editing tool
           </div>
-          <li class="light" id="hosting">
-            Using Firebase Hosting, SPA is implemented through React Router,
-            useContext is used to manage login status.
-          </li>
-          <li class="light" id="homemade">
-            Implementing functionalities such as rotation, dragging, and
-            resizing without relying on any external libraries.
-          </li>
-          <li class="light" id="paste">
-            Copy and paste the image, while simultaneously uploading the file to
-            the member's image gallery.
-          </li>
-          <li class="light" id="save">
-            Implement project storage and loading in conjunction with Firestore.
-          </li>
           <div class="links">
             <div class="linkcontent">
               <img class="linkImg" src="./images/link.png" />
@@ -231,25 +235,28 @@
               >
             </div>
           </div>
+          <div class="detail">
+            <li class="light" id="hosting">
+              Using Firebase Hosting, SPA is implemented through React Router,
+              useContext is used to manage login status.
+            </li>
+            <li class="light" id="homemade">
+              Implementing functionalities such as rotation, dragging, and
+              resizing without relying on any external libraries.
+            </li>
+            <li class="light" id="paste">
+              Copy and paste the image, while simultaneously uploading the file
+              to the member's image gallery.
+            </li>
+            <li class="light" id="save">
+              Implement project storage and loading in conjunction with
+              Firestore.
+            </li>
+          </div>
+
           <div class="subheading" id="TDT">
             Taipei Day Trip, Travel e-commerce website
           </div>
-          <li class="light" id="JavaScript">
-            Implement scrolling, carousel, login pop-up window, and avatar
-            preview features using pure JavaScript.
-          </li>
-          <li class="light" id="back-end">
-            The development involves using the Flask framework with Python,
-            creating RESTful APIs to interact with a MySQL database, and using
-            AJAX to make asynchronous requests to the server to fetch data.
-          </li>
-          <li class="light" id="tapPay">
-            Integrating TapPay SDK allows users to make payments easily without
-            leaving the web page.
-          </li>
-          <li class="light" id="deploy">
-            Deploying the project to AWS EC2 cloud server.
-          </li>
           <div class="links">
             <div class="linkcontent">
               <img class="linkImg" src="./images/link.png" />
@@ -266,37 +273,60 @@
               >
             </div>
           </div>
+          <div class="detail">
+            <li class="light" id="JavaScript">
+              Implement scrolling, carousel, login pop-up window, and avatar
+              preview features using pure JavaScript.
+            </li>
+            <li class="light" id="back-end">
+              The development involves using the Flask framework with Python,
+              creating RESTful APIs to interact with a MySQL database, and using
+              AJAX to make asynchronous requests to the server to fetch data.
+            </li>
+            <li class="light" id="tapPay">
+              Integrating TapPay SDK allows users to make payments easily
+              without leaving the web page.
+            </li>
+            <li class="light" id="deploy">
+              Deploying the project to AWS EC2 cloud server.
+            </li>
+          </div>
+
           <div class="heading">EXPERIENCES</div>
           <div class="date">
             <div class="subheading">WeHelp Bootcamp</div>
             <div class="subheading">Sept 2022 - Mar 2023</div>
           </div>
-          <li class="light" id="weekly">
-            Completed weekly project tasks continuously for six months without
-            interruption.
-          </li>
-          <li class="light" id="trip">
-            With a brief guidance, completed the Taipei day trip project
-            independently within seven weeks.
-          </li>
-          <li class="light" id="coopration">
-            Collaborative experience of using GitHub for a one-week project of
-            weather API integration.
-          </li>
-          <li class="light" id="react">
-            Completed the Designer project independently within eight weeks on
-            the first-time use of React framework.
-          </li>
+          <div class="detail">
+            <li class="light" id="weekly">
+              Completed weekly project tasks continuously for six months without
+              interruption.
+            </li>
+            <li class="light" id="trip">
+              With a brief guidance, completed the Taipei day trip project
+              independently within seven weeks.
+            </li>
+            <li class="light" id="coopration">
+              Collaborative experience of using GitHub for a one-week project of
+              weather API integration.
+            </li>
+            <li class="light" id="react">
+              Completed the Designer project independently within eight weeks on
+              the first-time use of React framework.
+            </li>
+          </div>
           <div class="date">
             <div class="subheading" id="cram">Cram school Teacher</div>
             <div class="subheading">Oct 2012 - Feb 2022</div>
           </div>
 
-          <li class="light" id="work">
-            As a cram school teacher , having worked in Taipei for nearly a
-            decade, my salary level has reached the top 12% among peers in the
-            same profession.
-          </li>
+          <div class="detail">
+            <li class="light" id="work">
+              As a cram school teacher , having worked in Taipei for nearly a
+              decade, my salary level has reached the top 12% among peers in the
+              same profession.
+            </li>
+          </div>
           <div class="heading">EDUCATION</div>
           <div class="date">
             <div class="subheading" id="edu">
